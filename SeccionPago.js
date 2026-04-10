@@ -27,3 +27,4 @@ const riesgo5 = 0.06960;
 let ibc = (salario+comisiones+totalHorasExtra) * 0.7
 let salud = ibc * porcentajeSalud
 let pension = ibc * porcentajePension
+let fondoSol = ibc * porcentajeFondoSol
