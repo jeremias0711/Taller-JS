@@ -51,3 +51,4 @@ if (edad < 18) {
     console.log("Usuario pensionado.");
 }
 
+const riesgos = ["Riesgo 1", "Riesgo 2", "Riesgo 3", "Riesgo 4", "Riesgo 5"];
