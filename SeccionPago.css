@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: #1e293b;
+}
+
+.contenedor{
+    width: 100%;
+    max-width: 950px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+}
+
+.encabezado{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.encabezado h1{
+    font-size: 2.2rem;
+    color: #1d4ed8;
+    margin-bottom: 10px;
+}
+
+.encabezado p{
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.datosDelUsuario,
+.formulario{
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+
+.formulario h2{
+    margin-bottom: 20px;
+    color: #0f172a;
+    font-size: 1.4rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+form button,
+form h2{
+    grid-column: span 2;
+}
+
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #334155;
+}
+
+input,
+select{
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus{
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+}
+
+button{
+    margin-top: 10px;
+    padding: 16px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.3);
+}
