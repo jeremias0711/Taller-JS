@@ -97,32 +97,6 @@ formulario.addEventListener("submit", function(event){
         console.log("Usuario pensionado.");
     }
 
-    let ibc = (salario + comisiones + totalHorasExtra) * 0.7;
-    let salud = ibc * porcentajeSalud;
-    let pension = ibc * porcentajePension;
-    let fondoSol = ibc * porcentajeFondoSol;
-
-    if (calificacionNiveldeRiesgo === "1") {
-
-        niveldeRiesgo = ibc * riesgo1;
-
-    } else if (calificacionNiveldeRiesgo === "2") {
-
-        niveldeRiesgo = ibc * riesgo2;
-
-    } else if (calificacionNiveldeRiesgo === "3") {
-
-        niveldeRiesgo = ibc * riesgo3;
-
-    } else if (calificacionNiveldeRiesgo === "4") {
-
-        niveldeRiesgo = ibc * riesgo4;
-
-    } else if (calificacionNiveldeRiesgo === "5") {
-
-        niveldeRiesgo = ibc * riesgo5;
-    }
-
     let totalDescuentos = salud + pension + fondoSol;
     let salarioFinal = salario + comisiones + totalHorasExtra - totalDescuentos;
 
