@@ -24,6 +24,8 @@ const riesgo5 = 0.06960;
 const riesgos = ["Riesgo 1", "Riesgo 2", "Riesgo 3", "Riesgo 4", "Riesgo 5"];
 const formulario = document.getElementById("datosTrabajador");
 
+// Prompts
+
 formulario.addEventListener("submit", function(event){
 
     event.preventDefault();
@@ -38,6 +40,8 @@ formulario.addEventListener("submit", function(event){
     totalHorasExtra = Number(document.getElementById("totalHorasExtra").value);
 
     calificacionNiveldeRiesgo = document.getElementById("calificacionNiveldeRiesgo").value;
+
+// Condicionales
 
     if(
         nombreCompleto === "" ||
