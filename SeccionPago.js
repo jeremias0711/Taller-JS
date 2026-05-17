@@ -93,11 +93,48 @@ formulario.addEventListener("submit", function(event){
         console.log("Usuario pensionado.");
     }
 
-    console.log("IBC:", ibc);
-    console.log("Salud:", salud);
-    console.log("Pensión:", pension);
-    console.log("Fondo Solidaridad:", fondoSol);
-    console.log("ARL:", niveldeRiesgo);
+    let ibc = (salario + comisiones + totalHorasExtra) * 0.7;
+    let salud = ibc * porcentajeSalud;
+    let pension = ibc * porcentajePension;
+    let fondoSol = ibc * porcentajeFondoSol;
 
-    alert("Cálculo realizado correctamente.");
+    if (calificacionNiveldeRiesgo === "1") {
+
+        niveldeRiesgo = ibc * riesgo1;
+
+    } else if (calificacionNiveldeRiesgo === "2") {
+
+        niveldeRiesgo = ibc * riesgo2;
+
+    } else if (calificacionNiveldeRiesgo === "3") {
+
+        niveldeRiesgo = ibc * riesgo3;
+
+    } else if (calificacionNiveldeRiesgo === "4") {
+
+        niveldeRiesgo = ibc * riesgo4;
+
+    } else if (calificacionNiveldeRiesgo === "5") {
+
+        niveldeRiesgo = ibc * riesgo5;
+    }
+
+    let totalDescuentos = salud + pension + fondoSol;
+    let salarioFinal = salario + comisiones + totalHorasExtra - totalDescuentos;
+
+    alert(
+        "RESULTADOS DEL CÁLCULO\n\n" +
+
+        "Nombre: " + nombreCompleto + "\n" +
+        "Documento: " + numeroDocumento + "\n\n" +
+
+        "IBC: $" + ibc.toFixed(2) + "\n" +
+        "Salud: $" + salud.toFixed(2) + "\n" +
+        "Pensión: $" + pension.toFixed(2) + "\n" +
+        "Fondo Solidaridad: $" + fondoSol.toFixed(2) + "\n" +
+        "ARL: $" + niveldeRiesgo.toFixed(2) + "\n\n" +
+
+        "Total descuentos: $" + totalDescuentos.toFixed(2) + "\n" +
+        "Salario final: $" + salarioFinal.toFixed(2)
+);
 });
